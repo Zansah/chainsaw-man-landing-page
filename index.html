@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/f4efa66e1d.js" crossorigin="anonymous"></script>
+  <title>Chainsaw - Layout design</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      background-image: url(denji.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    body:before{
+      content: '';  
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('denji.jpg') no-repeat center center / cover;
+      filter: blur(10px);  
+      border-radius: 15px;
+      z-index: -1;  
+    }
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      background: url('denji.jpg') no-repeat center center / cover;
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 900px;
+      width: 100%;
+      height: 450px;
+    }
+    .header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.09);
+      color: white;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+    .header .logo {
+      font-size: 20px;
+    }
+    .header .nav {
+      display: flex;
+      gap: 15px;
+    }
+    .header .nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+    .text-content {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+    }
+    .text-content h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+    .text-content img{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 400px;
+        bottom: 80px;
+        right: 35px;
+    }
+    .text-content p {
+      margin: 15px 0;
+      position: relative;
+      bottom: 350px;
+      left: 0;
+      color: white;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: relative;
+      bottom: 350px;
+    }
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: gold;
+
+    }
+    .rating span.inactive {
+      color: gray;
+    }
+    .buttons {
+      margin-top: 15px;
+      position: relative;
+      bottom: 310px;
+    }
+    .buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .buttons .watch {
+      background: red;
+      color: white;
+    }
+    .buttons .add {
+      background: white;
+      color: black;
+    }
+    .image-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        }
+
+    .placeholder1, .placeholder2, .placeholder3 {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;  
+        }
+
+    .placeholder1 img, .placeholder2 img, .placeholder3 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  
+        }
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="content">
+      <div class="text-content">
+        <div class="header">
+          <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+            <a href="#">My list</a>
+            <a href="#">Browse by Language</a>
+          </div>
+        </div>
+        <img src="logo.png" alt="">
+        <p style="margin-top: 120px;"> When man-eating Titans first appeared 100 years ago, humans found safety behind massive walls that stopped the giants in their tracks. But the safety they have had for so long is now threatened.</p>
+        <div class="rating">
+          <span class="star inactive"><i class="fa-regular fa-star"></i></span>
+          <span class="star inactive"><i class="fa-regular fa-star"></i></span>
+          <span class="star inactive"><i class="fa-regular fa-star"></i></span>
+          <span class="star inactive"><i class="fa-regular fa-star"></i></span>
+          <span class="star inactive"><i class="fa-regular fa-star"></i></span>
+        </div>
+        <div class="buttons">
+
+          <a href="https://www.crunchyroll.com/series/GVDHX8QNW/chainsaw-man">
+            <button class="watch">Watch Now</button>
+          </a>
+
+          <a href="https://www.viz.com/shonenjump/chapters/chainsaw-man">
+            <button class="add">Read Now</button>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="image-content">
+        <div class="placeholder1">
+          <img src="kid-denji.jpg" alt="Chainsaw Image 1">
+        </div>
+        <div class="placeholder2">
+          <img src="power.jpg" alt="Chainsaw Image 2">
+        </div>
+        <div class="placeholder3">
+          <img src="gun-and-fox.jpg" alt="Chainsaw Image 3">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
